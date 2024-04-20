@@ -1,0 +1,19 @@
+syntax = "proto3";
+package cam;
+
+message CMsg_CameraData {
+	message SingleCam{
+		uint32 tick = 1;
+		double time = 2;
+		double px = 3;
+		double py = 4;
+		double pz = 5;
+		double rx = 6;
+		double ry = 7;
+		double rz = 8;
+		double fov = 9;
+	}
+	
+	repeated CMsg_CameraData.SingleCam cams = 1;
+	double start_time = 2;
+}
