@@ -105,7 +105,9 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>F:\Github\DKMDemoTool\RoadtoCmake\build\Debug\_deps\protobuf-build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,8 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="c1001.cpp" />
-    <ClCompile Include="Module.ixx" />
-    <ClCompile Include="proto\cameradata.pb.cc" />
+    <ClCompile Include="Module_preprocessed.ixx" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class.h" />
